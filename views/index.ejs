@@ -15,7 +15,10 @@
     <% for (let i = 0; i < fruits.length; i++){ %>
 
         <a href="/fruits/<%= i %>"><li><%= fruits[i].name %></li></a>
-
+        <!-- ADD DELETE FORM HERE -->
+        <form action="/fruits/<%= i %>?_method=DELETE" method="post">
+            <input type="submit" value="delete">
+        </form>
     <% } %>
     </ul>
     
