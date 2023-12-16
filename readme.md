@@ -160,3 +160,14 @@ app.listen(3000, () => {console.log("server is listening on port 3000")})
 - `res.render()` will render a view in a "views" folder using a templating library matching the file extension (.ejs). Can send data as a second argument to be used when rendering the view.
 
 - `res.json()` will respond with json
+
+### Tips
+
+- Thunderclient and curl can used to test routes without an internet browser
+
+- If you need to kill a process on a certain port
+
+```
+kill $(lsof -t -i :xxxx)
+```
+*replace xxxx with the port number
